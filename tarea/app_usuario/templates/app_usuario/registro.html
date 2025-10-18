@@ -1,0 +1,16 @@
+<!-- app_usuario/templates/app_usuario/registro.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Registro</title></head>
+<body>
+  <h1>Registro</h1>
+  <form method="post">{% csrf_token %}
+    <input name="username" placeholder="username" required><br>
+    <input type="email" name="email" placeholder="email" required><br>
+    <input type="password" name="password" placeholder="password" required><br>
+    <input type="password" name="confirmar" placeholder="confirmar password" required><br>
+    <button type="submit">Registrarse</button>
+  </form>
+  {% for message in messages %}<p style="color:red">{{ message }}</p>{% endfor %}
+</body>a
+</html>
